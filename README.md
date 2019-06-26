@@ -1,3 +1,3 @@
 # Challenge-Ferias
-Challenge Baseado no Senhor dos aneis
-/nThema: Perseverança 
+Challenge Baseado no Senhor dos aneis<\n>
+Thema: Perseverança 
