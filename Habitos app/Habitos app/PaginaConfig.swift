@@ -94,8 +94,30 @@ class PaginaConfig: UIViewController {
         
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     createNotifcation()
-    
+    aviso(self)
     }
+    
+    
+ func aviso(_ sender: Any) {
+        
+        let aviso : UIAlertController = UIAlertController(title: "Salvo", message: "As informaçōes do seu habito foram atualizadas", preferredStyle:.alert)
+        let OkAction = UIAlertAction(title: "OK", style: .default)
+        aviso.addAction (OkAction)
+        
+        
+        var alertWindow: UIWindow!
+        alertWindow = UIWindow.init(frame: UIScreen.main.bounds)
+        alertWindow.tintColor = UIColor.black
+        alertWindow.rootViewController = UIViewController.init()
+        alertWindow.windowLevel  = UIWindow.Level.alert + 1
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(aviso, animated: true)
+        
+        
+        
+        
+    }
+    
     
     
     // ---------------notification-------------------

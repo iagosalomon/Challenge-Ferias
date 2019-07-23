@@ -155,7 +155,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         contexto.body = mensagem
         contexto.sound = UNNotificationSound.default
         //Badge é a o alerta vermelho que fica no icone do aplicativo quando há notificações e ela pode ser incrementada
-        contexto.badge = 1
+        contexto.badge = 0
         contexto.categoryIdentifier = identificador
         
         
@@ -209,7 +209,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         contexto.body = mensagem
         contexto.sound = UNNotificationSound.default
         //Badge é a o alerta vermelho que fica no icone do aplicativo quando há notificações e ela pode ser incrementada
-        contexto.badge = 1
+        contexto.badge = 0
         contexto.categoryIdentifier = identificador
         
         
