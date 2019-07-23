@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D27AB4922D90350008F5E98 /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB4822D90350008F5E98 /* Button.png */; };
+		7D27AB4B22DD28E7008F5E98 /* TutorialPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27AB4A22DD28E7008F5E98 /* TutorialPageVC.swift */; };
+		7D27AB5222DD2AD3008F5E98 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB4E22DD29F8008F5E98 /* Montserrat-Bold.otf */; };
+		7D27AB5322DD2AD7008F5E98 /* Montserrat-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB4D22DD29F8008F5E98 /* Montserrat-Italic.otf */; };
+		7D27AB5522DD2FDE008F5E98 /* Icone-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB5422DD2FDE008F5E98 /* Icone-logo.png */; };
+		7D27AB5F22DD36E0008F5E98 /* GOLDEN BALL:75%.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB5B22DD36E0008F5E98 /* GOLDEN BALL:75%.png */; };
+		7D27AB6022DD36E0008F5E98 /* GOLDEN BALL:100%.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB5C22DD36E0008F5E98 /* GOLDEN BALL:100%.png */; };
+		7D27AB6122DD36E0008F5E98 /* GOLDEN BALL-25%.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB5D22DD36E0008F5E98 /* GOLDEN BALL-25%.png */; };
+		7D27AB6222DD36E0008F5E98 /* GOLDEN BALL:50%.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB5E22DD36E0008F5E98 /* GOLDEN BALL:50%.png */; };
+		7D27AB6422DD3AAB008F5E98 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27AB6322DD3AAB008F5E98 /* MainPage.swift */; };
+		7D27AB6622DD3DF2008F5E98 /* UltimaPgTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */; };
+		7D2CFE3722E6B66B0092EAD7 /* Habito+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFE3522E6B66B0092EAD7 /* Habito+CoreDataClass.swift */; };
+		7D2CFE3822E6B66B0092EAD7 /* Habito+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFE3622E6B66B0092EAD7 /* Habito+CoreDataProperties.swift */; };
+		7D2CFE3A22E6B7110092EAD7 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFE3922E6B7110092EAD7 /* PersistenceManager.swift */; };
+		7D9E1B8122D8FB38004356F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */; };
+		7D9E1B8322D8FB38004356F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8222D8FB38004356F7 /* ViewController.swift */; };
+		7D9E1B8622D8FB38004356F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8422D8FB38004356F7 /* Main.storyboard */; };
+		7D9E1B8922D8FB38004356F7 /* Habitos_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8722D8FB38004356F7 /* Habitos_app.xcdatamodeld */; };
+		7D9E1B8B22D8FB3A004356F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8A22D8FB3A004356F7 /* Assets.xcassets */; };
+		7D9E1B8E22D8FB3A004356F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8C22D8FB3A004356F7 /* LaunchScreen.storyboard */; };
+		7DE4EA2B22E120EF00B398D1 /* PaginaPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4EA2A22E120EF00B398D1 /* PaginaPrincipal.swift */; };
+		7DE4EA2D22E1210300B398D1 /* PaginaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4EA2C22E1210300B398D1 /* PaginaConfig.swift */; };
+		7DE4EA2F22E1211600B398D1 /* PaginaCriarHabito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4EA2E22E1211600B398D1 /* PaginaCriarHabito.swift */; };
+		7DE4EA3122E2C7FC00B398D1 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE4EA3022E2C7FC00B398D1 /* Settings.png */; };
+		7DE4EA3322E2D24A00B398D1 /* goldenBall-transparente.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE4EA3222E2D24A00B398D1 /* goldenBall-transparente.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D27AB4822D90350008F5E98 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button.png; path = ../Button.png; sourceTree = "<group>"; };
+		7D27AB4A22DD28E7008F5E98 /* TutorialPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVC.swift; sourceTree = "<group>"; };
+		7D27AB4D22DD29F8008F5E98 /* Montserrat-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.otf"; sourceTree = "<group>"; };
+		7D27AB4E22DD29F8008F5E98 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		7D27AB5422DD2FDE008F5E98 /* Icone-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icone-logo.png"; path = "../Icone-logo.png"; sourceTree = "<group>"; };
+		7D27AB5B22DD36E0008F5E98 /* GOLDEN BALL:75%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GOLDEN BALL:75%.png"; sourceTree = "<group>"; };
+		7D27AB5C22DD36E0008F5E98 /* GOLDEN BALL:100%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GOLDEN BALL:100%.png"; sourceTree = "<group>"; };
+		7D27AB5D22DD36E0008F5E98 /* GOLDEN BALL-25%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GOLDEN BALL-25%.png"; sourceTree = "<group>"; };
+		7D27AB5E22DD36E0008F5E98 /* GOLDEN BALL:50%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GOLDEN BALL:50%.png"; sourceTree = "<group>"; };
+		7D27AB6322DD3AAB008F5E98 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimaPgTutorial.swift; sourceTree = "<group>"; };
+		7D2CFE3522E6B66B0092EAD7 /* Habito+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habito+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7D2CFE3622E6B66B0092EAD7 /* Habito+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habito+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7D2CFE3922E6B7110092EAD7 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		7D9E1B7D22D8FB38004356F7 /* Habitos app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habitos app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D9E1B8222D8FB38004356F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D9E1B8522D8FB38004356F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D9E1B8822D8FB38004356F7 /* Habitos_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habitos_app.xcdatamodel; sourceTree = "<group>"; };
+		7D9E1B8A22D8FB3A004356F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D9E1B8D22D8FB3A004356F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D9E1B8F22D8FB3A004356F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE4EA2A22E120EF00B398D1 /* PaginaPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaPrincipal.swift; sourceTree = "<group>"; };
+		7DE4EA2C22E1210300B398D1 /* PaginaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaConfig.swift; sourceTree = "<group>"; };
+		7DE4EA2E22E1211600B398D1 /* PaginaCriarHabito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaCriarHabito.swift; sourceTree = "<group>"; };
+		7DE4EA3022E2C7FC00B398D1 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		7DE4EA3222E2D24A00B398D1 /* goldenBall-transparente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goldenBall-transparente.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D9E1B7A22D8FB38004356F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D27AB5122DD2A34008F5E98 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7D27AB4E22DD29F8008F5E98 /* Montserrat-Bold.otf */,
+				7D27AB4D22DD29F8008F5E98 /* Montserrat-Italic.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		7D27AB5822DD2FFC008F5E98 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7DE4EA3022E2C7FC00B398D1 /* Settings.png */,
+				7D27AB4822D90350008F5E98 /* Button.png */,
+				7DE4EA3222E2D24A00B398D1 /* goldenBall-transparente.png */,
+				7D27AB5422DD2FDE008F5E98 /* Icone-logo.png */,
+				7D27AB5D22DD36E0008F5E98 /* GOLDEN BALL-25%.png */,
+				7D27AB5E22DD36E0008F5E98 /* GOLDEN BALL:50%.png */,
+				7D27AB5B22DD36E0008F5E98 /* GOLDEN BALL:75%.png */,
+				7D27AB5C22DD36E0008F5E98 /* GOLDEN BALL:100%.png */,
+			);
+			name = Images;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		7D9E1B7422D8FB38004356F7 = {
+			isa = PBXGroup;
+			children = (
+				7D9E1B7F22D8FB38004356F7 /* Habitos app */,
+				7D9E1B7E22D8FB38004356F7 /* Products */,
+				7D27AB5122DD2A34008F5E98 /* Fonts */,
+			);
+			sourceTree = "<group>";
+		};
+		7D9E1B7E22D8FB38004356F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D9E1B7D22D8FB38004356F7 /* Habitos app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D9E1B7F22D8FB38004356F7 /* Habitos app */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFE3522E6B66B0092EAD7 /* Habito+CoreDataClass.swift */,
+				7D2CFE3622E6B66B0092EAD7 /* Habito+CoreDataProperties.swift */,
+				7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */,
+				7D2CFE3922E6B7110092EAD7 /* PersistenceManager.swift */,
+				7D27AB6322DD3AAB008F5E98 /* MainPage.swift */,
+				7D9E1B8222D8FB38004356F7 /* ViewController.swift */,
+				7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */,
+				7D9E1B8422D8FB38004356F7 /* Main.storyboard */,
+				7DE4EA2A22E120EF00B398D1 /* PaginaPrincipal.swift */,
+				7DE4EA2C22E1210300B398D1 /* PaginaConfig.swift */,
+				7DE4EA2E22E1211600B398D1 /* PaginaCriarHabito.swift */,
+				7D27AB4A22DD28E7008F5E98 /* TutorialPageVC.swift */,
+				7D9E1B8A22D8FB3A004356F7 /* Assets.xcassets */,
+				7D9E1B8C22D8FB3A004356F7 /* LaunchScreen.storyboard */,
+				7D9E1B8F22D8FB3A004356F7 /* Info.plist */,
+				7D9E1B8722D8FB38004356F7 /* Habitos_app.xcdatamodeld */,
+				7D27AB5822DD2FFC008F5E98 /* Images */,
+			);
+			path = "Habitos app";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D9E1B7C22D8FB38004356F7 /* Habitos app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D9E1B9222D8FB3A004356F7 /* Build configuration list for PBXNativeTarget "Habitos app" */;
+			buildPhases = (
+				7D9E1B7922D8FB38004356F7 /* Sources */,
+				7D9E1B7A22D8FB38004356F7 /* Frameworks */,
+				7D9E1B7B22D8FB38004356F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Habitos app";
+			productName = "Habitos app";
+			productReference = 7D9E1B7D22D8FB38004356F7 /* Habitos app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D9E1B7522D8FB38004356F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "iago salomon";
+				TargetAttributes = {
+					7D9E1B7C22D8FB38004356F7 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 7D9E1B7822D8FB38004356F7 /* Build configuration list for PBXProject "Habitos app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D9E1B7422D8FB38004356F7;
+			productRefGroup = 7D9E1B7E22D8FB38004356F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D9E1B7C22D8FB38004356F7 /* Habitos app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D9E1B7B22D8FB38004356F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D27AB4922D90350008F5E98 /* Button.png in Resources */,
+				7D27AB5322DD2AD7008F5E98 /* Montserrat-Italic.otf in Resources */,
+				7D9E1B8E22D8FB3A004356F7 /* LaunchScreen.storyboard in Resources */,
+				7D9E1B8B22D8FB3A004356F7 /* Assets.xcassets in Resources */,
+				7D27AB5522DD2FDE008F5E98 /* Icone-logo.png in Resources */,
+				7DE4EA3322E2D24A00B398D1 /* goldenBall-transparente.png in Resources */,
+				7D27AB6122DD36E0008F5E98 /* GOLDEN BALL-25%.png in Resources */,
+				7D27AB5F22DD36E0008F5E98 /* GOLDEN BALL:75%.png in Resources */,
+				7D9E1B8622D8FB38004356F7 /* Main.storyboard in Resources */,
+				7DE4EA3122E2C7FC00B398D1 /* Settings.png in Resources */,
+				7D27AB6222DD36E0008F5E98 /* GOLDEN BALL:50%.png in Resources */,
+				7D27AB6022DD36E0008F5E98 /* GOLDEN BALL:100%.png in Resources */,
+				7D27AB5222DD2AD3008F5E98 /* Montserrat-Bold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D9E1B7922D8FB38004356F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2CFE3822E6B66B0092EAD7 /* Habito+CoreDataProperties.swift in Sources */,
+				7D27AB6422DD3AAB008F5E98 /* MainPage.swift in Sources */,
+				7D9E1B8922D8FB38004356F7 /* Habitos_app.xcdatamodeld in Sources */,
+				7D2CFE3A22E6B7110092EAD7 /* PersistenceManager.swift in Sources */,
+				7D27AB4B22DD28E7008F5E98 /* TutorialPageVC.swift in Sources */,
+				7DE4EA2D22E1210300B398D1 /* PaginaConfig.swift in Sources */,
+				7D9E1B8322D8FB38004356F7 /* ViewController.swift in Sources */,
+				7DE4EA2B22E120EF00B398D1 /* PaginaPrincipal.swift in Sources */,
+				7D2CFE3722E6B66B0092EAD7 /* Habito+CoreDataClass.swift in Sources */,
+				7DE4EA2F22E1211600B398D1 /* PaginaCriarHabito.swift in Sources */,
+				7D27AB6622DD3DF2008F5E98 /* UltimaPgTutorial.swift in Sources */,
+				7D9E1B8122D8FB38004356F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D9E1B8422D8FB38004356F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D9E1B8522D8FB38004356F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D9E1B8C22D8FB3A004356F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D9E1B8D22D8FB3A004356F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D9E1B9022D8FB3A004356F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D9E1B9122D8FB3A004356F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D9E1B9322D8FB3A004356F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UR6BVKFQM;
+				INFOPLIST_FILE = "Habitos app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "is.Habitos-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7D9E1B9422D8FB3A004356F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UR6BVKFQM;
+				INFOPLIST_FILE = "Habitos app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "is.Habitos-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D9E1B7822D8FB38004356F7 /* Build configuration list for PBXProject "Habitos app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D9E1B9022D8FB3A004356F7 /* Debug */,
+				7D9E1B9122D8FB3A004356F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D9E1B9222D8FB3A004356F7 /* Build configuration list for PBXNativeTarget "Habitos app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D9E1B9322D8FB3A004356F7 /* Debug */,
+				7D9E1B9422D8FB3A004356F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D9E1B8722D8FB38004356F7 /* Habitos_app.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D9E1B8822D8FB38004356F7 /* Habitos_app.xcdatamodel */,
+			);
+			currentVersion = 7D9E1B8822D8FB38004356F7 /* Habitos_app.xcdatamodel */;
+			path = Habitos_app.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7D9E1B7522D8FB38004356F7 /* Project object */;
+}
