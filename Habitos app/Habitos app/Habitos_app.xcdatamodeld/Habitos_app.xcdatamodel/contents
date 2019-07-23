@@ -5,8 +5,9 @@
         <attribute name="nome_habito" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome_recompensa" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="progresso_habito" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tem_habito" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Habito" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Habito" positionX="-54" positionY="-9" width="128" height="120"/>
     </elements>
 </model>

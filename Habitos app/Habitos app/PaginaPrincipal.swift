@@ -8,8 +8,14 @@
 
 import UIKit
 import CoreMotion
+import UserNotifications
 
 class PaginaPrincipal: UIViewController {
+    // variaveis da notificacao
+    
+    
+    
+    
     var porcentagemDoHabito: Double = 0
     var IncrementarHabito = 0
     var porcentagem: Double = 100/28
@@ -76,10 +82,14 @@ class PaginaPrincipal: UIViewController {
         porcentagemDoHabito += 1
         PorcentagemBola.constant = PorcentagemBola.constant + 8
         }
+        if IncrementarHabito == 28{
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+
+        }
     }
     
     @IBAction func ShowLabel(_ sender: Any) {
-        if IncrementarHabito <= 28{
+        if IncrementarHabito < 28{
         ButtonPorcentagem.setTitle("\(String(format: "%.f",round(porcentagem * porcentagemDoHabito)))%", for: .normal)
         }else{
             ButtonPorcentagem.setTitle("Parabens", for: .normal)
@@ -90,4 +100,7 @@ class PaginaPrincipal: UIViewController {
         ButtonPorcentagem.setTitle("", for: .normal)
     }
     
+    
+    
+
 }

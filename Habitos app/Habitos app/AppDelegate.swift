@@ -8,21 +8,40 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "PaginaPrincipal")
-//        
-//        self.window?.rootViewController = initialViewController
-//        self.window?.makeKeyAndVisible()
+        let options: UNAuthorizationOptions = [.alert,.sound,.badge]
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.requestAuthorization(options: options) {
+            (didAllow, error) in
+            if !didAllow {
+                print("Notifications not allowed by user")
+            }
+        }
+        
+        let apphasbeenopen = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if  apphasbeenopen{
+            
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "PaginaPrincipal")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        }else{
+            //So roda na primeira vez que o app roda 
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
         return true
     }
 
