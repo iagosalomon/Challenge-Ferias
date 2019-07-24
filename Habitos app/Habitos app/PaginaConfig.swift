@@ -10,6 +10,7 @@ import UIKit
 import  UserNotifications
 
 class PaginaConfig: UIViewController {
+    var window: UIWindow?
     
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
 
@@ -25,10 +26,12 @@ class PaginaConfig: UIViewController {
         if SwitchState.isOn{
             labelRecompensa.isHidden = false
             TextFieldRecompensa.isHidden = false
+            UserDefaults.standard.set(true, forKey: "temrecompensa")
         }
         else{
             labelRecompensa.isHidden = true
             TextFieldRecompensa.isHidden = true
+            UserDefaults.standard.set(false, forKey: "temrecompensa")
         }
     }
     
@@ -94,6 +97,7 @@ class PaginaConfig: UIViewController {
         
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     createNotifcation()
+    UserDefaults.standard.set(TextFieldRecompensa.text, forKey: "nomeRecompensa")
     aviso(self)
     }
     
@@ -117,8 +121,55 @@ class PaginaConfig: UIViewController {
         
         
     }
+    func avisoDeletar(_ sender: Any) {
+        
+        let aviso : UIAlertController = UIAlertController(title: "Deletar Habito", message: "Voce realmete deseja deletar seu habito e começar um novo ?", preferredStyle:.alert)
+//        let OkAction = UIAlertAction(title: "OK", style: .default)
+        let CancelAction = UIAlertAction(title: "Cancelar", style: .cancel)
+        let OkAction =  UIAlertAction(title: "Apagar",
+                                  style: .destructive,
+                                  handler: {action in self.ApagarTudo()})
+        aviso.addAction (OkAction)
+        aviso.addAction (CancelAction)
+        
+        
+        var alertWindow: UIWindow!
+        alertWindow = UIWindow.init(frame: UIScreen.main.bounds)
+        alertWindow.tintColor = UIColor.black
+        alertWindow.rootViewController = UIViewController.init()
+        alertWindow.windowLevel  = UIWindow.Level.alert + 1
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(aviso, animated: true)
+        
+        
+        
+        
+    }
+    
+    @IBAction func apagarHabito(_ sender: Any) {
+        avisoDeletar(self)
+        
+    }
     
     
+    func ApagarTudo(){
+        //reset das variaveis basicas do app
+        UserDefaults.standard.set("", forKey: "nomeHabito")
+        UserDefaults.standard.set(false, forKey: "temhabito")
+        UserDefaults.standard.set(false, forKey: "temrecompensa")
+        UserDefaults.standard.set("", forKey: "nomeRecompensa")
+        
+        //reset variaveis da pagina principal
+        UserDefaults.standard.set(0, forKey: "IncrementarHabito")
+        UserDefaults.standard.set(0.0, forKey: "porcentagemDoHabito")
+        
+        //ir para a pagina de criacao de habito
+        
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "criacaodeHabito") as! UINavigationController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = nav
+    }
     
     // ---------------notification-------------------
     
@@ -145,6 +196,11 @@ class PaginaConfig: UIViewController {
         let identificador = "identifier\(Int.random(in: 0..<6))"
         self.appDelegate?.enviarNotificacao(titulo, "", corpo, identificador, dateComponents)
         
+        
+    }
+    
+
+    func fizhabitohj(){
         
     }
 

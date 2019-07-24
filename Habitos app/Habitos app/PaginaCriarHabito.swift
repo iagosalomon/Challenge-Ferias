@@ -44,10 +44,12 @@ class PaginaCriarHabito: UIViewController {
         if switchState.isOn{
             recompensaLabel.isHidden = false
             recompensaTextFiel.isHidden = false
+            UserDefaults.standard.set(true, forKey: "temrecompensa")
         }
         else{
             recompensaLabel.isHidden = true
             recompensaTextFiel.isHidden = true
+            UserDefaults.standard.set(false, forKey: "temrecompensa")
         }
     }
     
@@ -128,6 +130,9 @@ class PaginaCriarHabito: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = nav
         createNotifcation()
+        UserDefaults.standard.set(textFieldNomeHabito.text, forKey: "nomeHabito")
+        UserDefaults.standard.set(recompensaTextFiel.text, forKey: "nomeRecompensa")
+        UserDefaults.standard.set(true, forKey: "temhabito")
     }
 // ---------------notification-------------------
     

@@ -219,6 +219,9 @@
                                 <state key="normal" title="Apagar habito">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="apagarHabito:" destination="nrb-qx-veq" eventType="touchUpInside" id="dCX-KC-lLQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13723170757293701" green="0.1333310604095459" blue="0.13333350419998169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -680,7 +683,7 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
         <!--Navigation Controller-->
         <scene sceneID="4uV-bY-sPq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cBy-Qw-Tdq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="criacaodeHabito" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cBy-Qw-Tdq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="pXL-7G-0S3">

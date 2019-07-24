@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //Para usar podermos usar o protocolo UNUserNotificationCenterDelegate
         //na extensão mais abaixo
+        
         centroDeNotificacao.delegate = self
         
         //Aqui pedimos três coisas ao usuário, para a notificação gerar um alerta
@@ -49,18 +50,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        
+        
         let apphasbeenopen = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
+
         if  apphasbeenopen{
-            
+        //vai pra pagaina principal
+        let temHabito = UserDefaults.standard.bool(forKey: "temhabito")
+            if temHabito{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "PaginaPrincipal")
         
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+            }else{
+                //vai pra pagina de criacao de habito
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "criacaodeHabito")
+                
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+            }
+            
+            
+            
+        
         }else{
             //So roda na primeira vez que o app roda 
             UserDefaults.standard.set(true, forKey: "launchedBefore")
+            //setup das variaveis basicas do app
+            UserDefaults.standard.set("", forKey: "nomeHabito")
+            UserDefaults.standard.set(false, forKey: "temhabito")
+            UserDefaults.standard.set(false, forKey: "temrecompensa")
+            UserDefaults.standard.set("", forKey: "nomeRecompensa")
+            
+            //set variaveis da pagina principal
+            UserDefaults.standard.set(0, forKey: "IncrementarHabito")
+            UserDefaults.standard.set(0.0, forKey: "porcentagemDoHabito")
+            
         }
         return true
     }

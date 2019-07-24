@@ -18,7 +18,6 @@
 		7D27AB6222DD36E0008F5E98 /* GOLDEN BALL:50%.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB5E22DD36E0008F5E98 /* GOLDEN BALL:50%.png */; };
 		7D27AB6422DD3AAB008F5E98 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27AB6322DD3AAB008F5E98 /* MainPage.swift */; };
 		7D27AB6622DD3DF2008F5E98 /* UltimaPgTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */; };
-		7D2CFE3A22E6B7110092EAD7 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFE3922E6B7110092EAD7 /* PersistenceManager.swift */; };
 		7D9E1B8122D8FB38004356F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */; };
 		7D9E1B8322D8FB38004356F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8222D8FB38004356F7 /* ViewController.swift */; };
 		7D9E1B8622D8FB38004356F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8422D8FB38004356F7 /* Main.storyboard */; };
@@ -44,7 +43,6 @@
 		7D27AB5E22DD36E0008F5E98 /* GOLDEN BALL:50%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GOLDEN BALL:50%.png"; sourceTree = "<group>"; };
 		7D27AB6322DD3AAB008F5E98 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimaPgTutorial.swift; sourceTree = "<group>"; };
-		7D2CFE3922E6B7110092EAD7 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		7D9E1B7D22D8FB38004356F7 /* Habitos app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habitos app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E1B8222D8FB38004356F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */,
-				7D2CFE3922E6B7110092EAD7 /* PersistenceManager.swift */,
 				7D27AB6322DD3AAB008F5E98 /* MainPage.swift */,
 				7D9E1B8222D8FB38004356F7 /* ViewController.swift */,
 				7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */,
@@ -218,7 +215,6 @@
 			files = (
 				7D27AB6422DD3AAB008F5E98 /* MainPage.swift in Sources */,
 				7D9E1B8922D8FB38004356F7 /* Habitos_app.xcdatamodeld in Sources */,
-				7D2CFE3A22E6B7110092EAD7 /* PersistenceManager.swift in Sources */,
 				7D27AB4B22DD28E7008F5E98 /* TutorialPageVC.swift in Sources */,
 				7DE4EA2D22E1210300B398D1 /* PaginaConfig.swift in Sources */,
 				7D9E1B8322D8FB38004356F7 /* ViewController.swift in Sources */,

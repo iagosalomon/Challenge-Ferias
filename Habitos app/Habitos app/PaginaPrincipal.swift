@@ -12,12 +12,13 @@ import UserNotifications
 
 class PaginaPrincipal: UIViewController {
     // variaveis da notificacao
+    var appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     
     
+    var porcentagemDoHabito: Double = UserDefaults.standard.double(forKey: "porcentagemDoHabito")
+    var IncrementarHabito = UserDefaults.standard.integer(forKey: "IncrementarHabito")
     
-    var porcentagemDoHabito: Double = 0
-    var IncrementarHabito = 0
     var porcentagem: Double = 100/28
     @IBOutlet weak var viewLiquido: UIView!
     @IBOutlet weak var viewPorcent: UIView!
@@ -38,7 +39,7 @@ class PaginaPrincipal: UIViewController {
         super.viewDidLoad()
         viewLiquido.layer.cornerRadius = 134.5
         startDeviceMotion()
-
+        calibrarPagina()
         // Do any additional setup after loading the view.
     }
     //Codigo Omella
@@ -77,14 +78,25 @@ class PaginaPrincipal: UIViewController {
 
 }
     @IBAction func AumentarPorcentagem(_ sender: Any) {
+        if IncrementarHabito <= 27{
         IncrementarHabito += 1
         if IncrementarHabito <= 28{
         porcentagemDoHabito += 1
-        PorcentagemBola.constant = PorcentagemBola.constant + 8
+        PorcentagemBola.constant = CGFloat(23 + 8 * IncrementarHabito)
+            
+        UserDefaults.standard.set(IncrementarHabito, forKey: "IncrementarHabito")
+        UserDefaults.standard.set(IncrementarHabito, forKey: "porcentagemDoHabito")
+            
+        var  temRecompensa =  UserDefaults.standard.bool(forKey: "temrecompensa")
+            if  temRecompensa{
+        createNotifcation()
+            }
+    
         }
         if IncrementarHabito == 28{
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 
+        }
         }
     }
     
@@ -101,6 +113,22 @@ class PaginaPrincipal: UIViewController {
     }
     
     
+    func calibrarPagina(){
+        PorcentagemBola.constant = CGFloat(23 + 8 * IncrementarHabito)
+        self.navigationItem.title = UserDefaults.standard.string(forKey: "nomeHabito")
     
+    }
 
+    
+    func createNotifcation(){
+        var nomeRecompensa = UserDefaults.standard.string(forKey: "nomeRecompensa")
+        var titulo = "\(String(describing: nomeRecompensa!))"
+        var corpo = "Voce conseguiu comprir seu objetivo hoje, aproveite sua recompensa"
+        
+        
+        let identificador = "identifier\(Int.random(in: 0..<6))"
+        self.appDelegate?.enviarlembrete(titulo,"" , corpo, identificador, 3600)
+        
+        
+    }
 }

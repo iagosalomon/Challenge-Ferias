@@ -91,7 +91,7 @@ class TutorialPageVC: UIPageViewController {
         segue.destination.modalTransitionStyle = .crossDissolve
     }
 }
-
+//controla o flow das paginas
 extension TutorialPageVC: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
