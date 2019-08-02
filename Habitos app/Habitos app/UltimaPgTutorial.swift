@@ -22,5 +22,25 @@ class UltimaPgTutorial: UIViewController {
     
     
     
-
+    @IBAction func ComecarJornada(_ sender: Any) {
+        
+        let temHabito = UserDefaults.standard.bool(forKey: "temhabito")
+        
+        if !temHabito{
+        
+        
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "criacaodeHabito") as! UINavigationController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = nav
+        }else{
+            
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaginaPrincipal") as! UINavigationController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = nav
+            
+        }
+    }
+    
 }

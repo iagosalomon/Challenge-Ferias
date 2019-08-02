@@ -28,6 +28,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.82352941176470584" green="0.64313725490196072" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.82352941176470584" green="0.64313725490196072" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q1a-Mi-JXC"/>
@@ -35,7 +38,72 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qs9-b8-m0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-616" y="116"/>
+            <point key="canvasLocation" x="-697" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2dv-zM-ESf">
+            <objects>
+                <navigationController id="Z1n-Hp-QvY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3hf-96-7LH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kdl-od-LNo" kind="relationship" relationship="rootViewController" id="EeI-8j-l9s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xx-3q-bc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2688" y="96"/>
+        </scene>
+        <!--Transition View Controller-->
+        <scene sceneID="d0o-kb-W2m">
+            <objects>
+                <viewController id="kdl-od-LNo" customClass="TransitionViewController" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uBr-8o-qEN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ9-VP-ZKp">
+                                <rect key="frame" x="53" y="335.5" width="308" height="105"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <state key="normal" title="HISTORICO" backgroundImage="Button.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="AumentarPorcentagem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZo-5Z-J9c"/>
+                                    <segue destination="9g5-mZ-5Tf" kind="show" id="rla-xH-xPd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMH-sX-ZL4">
+                                <rect key="frame" x="53" y="455.5" width="308" height="105"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <state key="normal" title="TUTORIAL" backgroundImage="Button.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="AumentarPorcentagem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKk-Qd-Nhv"/>
+                                    <segue destination="HeC-aX-o1D" kind="show" id="6vz-f5-Cd0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490196078433" green="0.13332846760749817" blue="0.13326519727706909" alpha="0.65689212328767121" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iZ9-VP-ZKp" firstAttribute="centerY" secondItem="uBr-8o-qEN" secondAttribute="centerY" constant="-60" id="EKd-an-KYz"/>
+                            <constraint firstItem="iZ9-VP-ZKp" firstAttribute="centerX" secondItem="uBr-8o-qEN" secondAttribute="centerX" id="WRk-Bs-ETz"/>
+                            <constraint firstItem="WMH-sX-ZL4" firstAttribute="centerX" secondItem="uBr-8o-qEN" secondAttribute="centerX" id="ber-0n-WIp"/>
+                            <constraint firstItem="WMH-sX-ZL4" firstAttribute="centerY" secondItem="uBr-8o-qEN" secondAttribute="centerY" constant="60" id="t6B-x4-WRr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qfo-2f-Jpc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q7N-Zr-QOu"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLk-bW-169" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1755" y="319"/>
         </scene>
         <!--Seu Habito-->
         <scene sceneID="tne-QT-ifu">
@@ -136,7 +204,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Seu Habito" id="jJ3-bS-R06">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="bookmarks" id="ZXG-n5-3Ec"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="bookmarks" id="ZXG-n5-3Ec">
+                            <connections>
+                                <segue destination="Z1n-Hp-QvY" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Lzs-X4-3r5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Wgo-yT-kDk">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cQc-qG-QDE">
                                 <rect key="frame" x="364" y="7" width="30" height="30"/>
@@ -152,7 +224,9 @@
                     <connections>
                         <outlet property="Button" destination="hZK-09-xQW" id="MlM-73-a45"/>
                         <outlet property="ButtonPorcentagem" destination="9W7-DJ-JrX" id="MAR-dE-NBe"/>
+                        <outlet property="FraseInspiradora" destination="wwC-kv-nEh" id="95r-2O-gtV"/>
                         <outlet property="PorcentagemBola" destination="3FM-nt-mPb" id="CGm-z0-Wl0"/>
+                        <outlet property="autorFrase" destination="vfj-Hm-arD" id="hnL-E7-bMq"/>
                         <outlet property="viewLiquido" destination="IeB-3X-asl" id="8Pq-y9-OxI"/>
                         <outlet property="viewPorcent" destination="bZl-1i-6zo" id="jE8-fa-Y5b"/>
                     </connections>
@@ -294,7 +368,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOLDEN BALL-25%.png" translatesAutoresizingMaskIntoConstraints="NO" id="jbT-5U-Ujp">
                                 <rect key="frame" x="40" y="84" width="334" height="301.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAM e um aplicativo que ira te acompanhar na jornada de criar um habito novo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-1a-bBr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAM è um aplicativo que ira te acompanhar na jornada de criar um hàbito novo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-1a-bBr">
                                 <rect key="frame" x="40" y="490.5" width="334" height="329.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -331,12 +405,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Jv-5A-EBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89.855072463768124" y="-797.54464285714278"/>
+            <point key="canvasLocation" x="138" y="-798"/>
         </scene>
         <!--Tutorial PageVC-->
+        <scene sceneID="OrX-mL-a1t">
+            <objects>
+                <pageViewController storyboardIdentifier="Tutorial" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="HeC-aX-o1D" customClass="TutorialPageVC" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7o-jc-TVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="-798"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ZZx-6g-FOm">
             <objects>
-                <viewController storyboardIdentifier="tutorial_pg_2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N8V-9O-7o2" customClass="TutorialPageVC" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorial_pg_2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N8V-9O-7o2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GzY-ee-KDM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,9 +434,9 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHk-ar-BjM">
                                 <rect key="frame" x="40" y="491" width="334" height="329"/>
-                                <string key="text">Sua Jornada consiste em  28 dias realizando seu habito
-Apos ter feito ele no dia so precisa clicar no botao  adicionar esforco para atualizar seu progresso
-e ver o liquido dentro do circulo ir subindo ate voce completar o seu habito</string>
+                                <string key="text">Sua Jornada consiste em  28 dias realizando seu hàbito
+Apos ter feito ele no dia so precisa clicar no botāo  adicionar esforço para atualizar seu progresso
+e ver o liquido dentro do circulo ir subindo ate voce completar o seu hàbito</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -410,8 +492,8 @@ e ver o liquido dentro do circulo ir subindo ate voce completar o seu habito</st
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIl-HT-UL8">
                                 <rect key="frame" x="40" y="491" width="334" height="329"/>
-                                <string key="text">Segundo especialistas da area, 28 dia e o quanto demora para desenvolver um habito na sua vida.
-Caso voce venha a quebrar esses 28 dias, sua jornada ira ser reiniciada</string>
+                                <string key="text">Segundo especialistas da area, 28 dias è o quanto demora para desenvolver um hàbito na sua vida.
+Caso voce venha a quebrar esses 28 dias, recomendo recomeçar a jornada</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -448,10 +530,10 @@ Caso voce venha a quebrar esses 28 dias, sua jornada ira ser reiniciada</string>
             </objects>
             <point key="canvasLocation" x="1430" y="-798"/>
         </scene>
-        <!--View Controller-->
+        <!--Ultima Pg Tutorial-->
         <scene sceneID="YJm-UO-imu">
             <objects>
-                <viewController storyboardIdentifier="tutorial_pg_4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="suR-sD-pw1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorial_pg_4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="suR-sD-pw1" customClass="UltimaPgTutorial" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7dp-rJ-gfp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -506,10 +588,10 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
             </objects>
             <point key="canvasLocation" x="2135" y="-798"/>
         </scene>
-        <!--View Controller-->
+        <!--Ultima Pg Tutorial-->
         <scene sceneID="tVr-sd-hcN">
             <objects>
-                <viewController storyboardIdentifier="tutorial_pg_5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dxr-el-jGq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorial_pg_5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dxr-el-jGq" customClass="UltimaPgTutorial" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eu9-tf-IG1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,6 +612,9 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="ComecarJornada:" destination="dxr-el-jGq" eventType="touchUpInside" id="nFg-C0-mfA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1372317076" green="0.13333106040000001" blue="0.13333350420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -679,6 +764,83 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
                 <exit id="SeE-xI-6Gp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3659.420289855073" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RFp-dV-PWG">
+            <objects>
+                <viewController id="9g5-mZ-5Tf" customClass="ViewController" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kd1-rm-QfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aL4-xA-epV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.13733807210000001" green="0.1333284676" blue="0.1332651973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="171" id="dwo-C0-LqJ" customClass="HistoricoCell" customModule="Habitos_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="171"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dwo-C0-LqJ" id="P1i-Kb-pLv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="170.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOLDEN BALL:100%.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-lO-QwR">
+                                                    <rect key="frame" x="20" y="21" width="165.5" height="124"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do habito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOv-6r-G4Y">
+                                                    <rect key="frame" x="195.5" y="41" width="208.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habito completo em : 08/10/1997" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pow-MR-58n">
+                                                    <rect key="frame" x="195.5" y="82" width="208.5" height="41.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pow-MR-58n" firstAttribute="top" secondItem="QOv-6r-G4Y" secondAttribute="bottom" constant="20" id="0Q4-Mn-gyc"/>
+                                                <constraint firstItem="QOv-6r-G4Y" firstAttribute="top" secondItem="P1i-Kb-pLv" secondAttribute="topMargin" constant="30" id="5it-M9-bfo"/>
+                                                <constraint firstAttribute="trailing" secondItem="pow-MR-58n" secondAttribute="trailing" constant="10" id="GZB-4d-B7H"/>
+                                                <constraint firstItem="pow-MR-58n" firstAttribute="leading" secondItem="E9Z-lO-QwR" secondAttribute="trailing" constant="10" id="JWX-WN-5lE"/>
+                                                <constraint firstAttribute="trailing" secondItem="QOv-6r-G4Y" secondAttribute="trailing" constant="10" id="PMc-G4-zg0"/>
+                                                <constraint firstItem="QOv-6r-G4Y" firstAttribute="leading" secondItem="E9Z-lO-QwR" secondAttribute="trailing" constant="10" id="VN6-NZ-cvB"/>
+                                                <constraint firstItem="E9Z-lO-QwR" firstAttribute="height" secondItem="P1i-Kb-pLv" secondAttribute="width" multiplier="0.3" id="XnX-2I-Cfa"/>
+                                                <constraint firstItem="E9Z-lO-QwR" firstAttribute="leading" secondItem="P1i-Kb-pLv" secondAttribute="leadingMargin" id="bRw-8p-Wj0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="E9Z-lO-QwR" secondAttribute="bottom" constant="10" id="byl-0E-BPH"/>
+                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="pow-MR-58n" secondAttribute="bottom" constant="57.5" id="dg2-UE-SKQ"/>
+                                                <constraint firstItem="E9Z-lO-QwR" firstAttribute="top" secondItem="P1i-Kb-pLv" secondAttribute="topMargin" constant="10" id="kdF-bc-9Ne"/>
+                                                <constraint firstItem="E9Z-lO-QwR" firstAttribute="width" secondItem="P1i-Kb-pLv" secondAttribute="width" multiplier="0.4" id="mhB-nn-cd8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.13725490196078433" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="dataHabito" destination="pow-MR-58n" id="i1G-P6-mDJ"/>
+                                            <outlet property="nomeHabito" destination="QOv-6r-G4Y" id="WMW-0U-oEO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490196078433" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9mv-R9-UdS" firstAttribute="trailing" secondItem="aL4-xA-epV" secondAttribute="trailing" id="DCd-lz-c7W"/>
+                            <constraint firstItem="aL4-xA-epV" firstAttribute="leading" secondItem="9mv-R9-UdS" secondAttribute="leading" id="JPS-db-PYP"/>
+                            <constraint firstItem="9mv-R9-UdS" firstAttribute="bottom" secondItem="aL4-xA-epV" secondAttribute="bottom" id="ifm-a2-C8C"/>
+                            <constraint firstItem="aL4-xA-epV" firstAttribute="top" secondItem="9mv-R9-UdS" secondAttribute="top" id="kNo-1b-6Mi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9mv-R9-UdS"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aL4-xA-epV" id="bAt-0e-7PW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuX-Vo-kX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="923"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4uV-bY-sPq">

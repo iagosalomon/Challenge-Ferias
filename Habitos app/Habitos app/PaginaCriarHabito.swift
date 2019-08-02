@@ -118,13 +118,17 @@ class PaginaCriarHabito: UIViewController {
     }
     
     @IBAction func CriarHabito(_ sender: Any) {
-        //Salvar os habitos no cor data aqui
-//        persistenceManager.save()
         
         
-        //-----------------------------------
+        //nao deixa criar habito sem nome ou n deixa falar que quer recompensa mas n colocar o nome dela
         
-        
+        if textFieldNomeHabito.text == ""{
+            aviso(self)
+        }else if recompensaTextFiel.text == "" && switchState.isOn{
+            aviso(self)
+        }
+        else{
+            print("criou Habito")
         let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaginaPrincipal") as! UINavigationController
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -133,6 +137,7 @@ class PaginaCriarHabito: UIViewController {
         UserDefaults.standard.set(textFieldNomeHabito.text, forKey: "nomeHabito")
         UserDefaults.standard.set(recompensaTextFiel.text, forKey: "nomeRecompensa")
         UserDefaults.standard.set(true, forKey: "temhabito")
+        }
     }
 // ---------------notification-------------------
     
@@ -152,12 +157,32 @@ class PaginaCriarHabito: UIViewController {
         dateComponents.hour = components.hour!
         dateComponents.minute = components.minute!
         titulo = "\(textFieldNomeHabito.text!)"
-        corpo = "Continua a desenvoler seu habito, voce consegue"
+        corpo = "Continue a desenvoler seu hábito, você consegue!"
         
         
         //O identificador serve para o caso de queremos identificar uma notificação especifica
         let identificador = "identifier\(Int.random(in: 0..<6))"
         self.appDelegate?.enviarNotificacao(titulo, "", corpo, identificador, dateComponents)
+        
+        
+        
+    }
+    func aviso(_ sender: Any) {
+        
+        let aviso : UIAlertController = UIAlertController(title: "Incompleto", message: "Preencha todos os campos de texto para criar o habito", preferredStyle:.alert)
+        let OkAction = UIAlertAction(title: "OK", style: .default)
+        aviso.addAction (OkAction)
+        
+        
+        var alertWindow: UIWindow!
+        alertWindow = UIWindow.init(frame: UIScreen.main.bounds)
+        alertWindow.tintColor = UIColor.black
+        alertWindow.rootViewController = UIViewController.init()
+        alertWindow.windowLevel  = UIWindow.Level.alert + 1
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(aviso, animated: true)
+        
+        
         
         
     }

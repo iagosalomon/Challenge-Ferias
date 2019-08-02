@@ -6,19 +6,22 @@
 //  Copyright © 2019 iago salomon. All rights reserved.
 //
 
+
+
+
 import UIKit
 import CoreData
 import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     let centroDeNotificacao = UNUserNotificationCenter.current()
     
     
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //Para usar podermos usar o protocolo UNUserNotificationCenterDelegate
@@ -54,17 +57,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let apphasbeenopen = UserDefaults.standard.bool(forKey: "launchedBefore")
         
-
+        
         if  apphasbeenopen{
-        //vai pra pagaina principal
-        let temHabito = UserDefaults.standard.bool(forKey: "temhabito")
+            //vai pra pagaina principal
+            let temHabito = UserDefaults.standard.bool(forKey: "temhabito")
             if temHabito{
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "PaginaPrincipal")
-        
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "PaginaPrincipal")
+                
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
             }else{
                 //vai pra pagina de criacao de habito
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -77,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             
             
-        
+            
         }else{
             //So roda na primeira vez que o app roda 
             UserDefaults.standard.set(true, forKey: "launchedBefore")
@@ -86,39 +89,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(false, forKey: "temhabito")
             UserDefaults.standard.set(false, forKey: "temrecompensa")
             UserDefaults.standard.set("", forKey: "nomeRecompensa")
+            UserDefaults.standard.set(false, forKey: "jaAdicionouHabitoHoje")
             
             //set variaveis da pagina principal
             UserDefaults.standard.set(0, forKey: "IncrementarHabito")
             UserDefaults.standard.set(0.0, forKey: "porcentagemDoHabito")
             
+            
+            //inicia a notification que habilita o usuario a adicionar mais esforco ao habito
+            HabilitarIncrementacaoDeHabitoDiario()
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Tutorial")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            
         }
         return true
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
+    
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -149,7 +165,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     
-
+    
     
     
     // MARK: - Core Data Saving support
@@ -202,7 +218,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         //Criando os botões de ações
         let acaoDeSoneca = UNNotificationAction(identifier: "Repetir", title: "Repetir", options: [])
-        let acaoDeDesligar = UNNotificationAction(identifier: "Desligar", title: "Desligar", options: [.destructive])
+        let acaoDeDesligar = UNNotificationAction(identifier: "ok", title: "ok", options: [.destructive])
         let categoria = UNNotificationCategory(identifier: identificador,
                                                actions: [acaoDeSoneca, acaoDeDesligar],
                                                intentIdentifiers: [],
@@ -256,7 +272,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         //Criando os botões de ações
         let acaoDeSoneca = UNNotificationAction(identifier: "Repetir", title: "Me avise em uma hora", options: [])
-        let acaoDeDesligar = UNNotificationAction(identifier: "Desligar", title: "ok", options: [.destructive])
+        let acaoDeDesligar = UNNotificationAction(identifier: "ok", title: "ok", options: [.destructive])
         let categoria = UNNotificationCategory(identifier: identificador,
                                                actions: [acaoDeSoneca, acaoDeDesligar],
                                                intentIdentifiers: [],
@@ -307,14 +323,91 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             //recriar notificacao
             enviarlembrete("Titulo", "", "Corpo", "identificador", 3600)
         }
-        else if identificador == "Desligar" {
-            print("Desligar")
+        else if identificador == "ok" {
+            
         }
         
         //Não há retorno
+        if response.notification.request.content.categoryIdentifier == "habilitarIncrementacaoDeHabito"{
+            UserDefaults.standard.set(false, forKey: "jaAdicionouHabitoHoje")
+            print("resetou")
+            
+        }
         completionHandler()
     }
+    
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                didReceive response: UNNotificationResponse,
+//                                withCompletionHandler completionHandler: @escaping () -> Void) {
+//
+//        //Chamando identificador de ações
+//        let identificador = response.actionIdentifier
+//
+//        if identificador == "habilitarIncrementacaoDeHabito" {
+//            UserDefaults.standard.set(false, forKey: "jaAdicionouHabitoHoje")
+//            print("resetou")
+//        }
+//
+//        //Não há retorno
+//        completionHandler()
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func HabilitarIncrementacaoDeHabitoDiario() {
+        
+        //Essa instancia de classe é necessária para criar o corpo da notificação
+        let contexto = UNMutableNotificationContent()
+        
+        //Criando corpo da notificação
+        contexto.title = ""
+        contexto.subtitle = ""
+        contexto.body = ""
+        contexto.sound = UNNotificationSound.default
+        //Badge é a o alerta vermelho que fica no icone do aplicativo quando há notificações e ela pode ser incrementada
+        contexto.badge = 0
+        contexto.categoryIdentifier = "habilitarIncrementacaoDeHabito"
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+        dateComponents.hour = 14
+        dateComponents.minute = 35
+        
+        
+        
+        let categoria = UNNotificationCategory(identifier: "habilitarIncrementacaoDeHabito",
+                                               actions: [],
+                                               intentIdentifiers: [],
+                                               options: [])
+        contexto.categoryIdentifier = "habilitarIncrementacaoDeHabito"
+        
+        
+        //Adicionando as ações ao nosso centro de notificações
+        centroDeNotificacao.setNotificationCategories([categoria])
+        
+        //Criando a requisição
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let requisicao = UNNotificationRequest(identifier: "habilitarIncrementacaoDeHabito", content: contexto, trigger: trigger)
+        
+        //Adicionando a requisição ao nosso centro de notificações
+        centroDeNotificacao.add(requisicao) { (error) in
+            if let error = error {
+                print("Deu ruim: \(error.localizedDescription)")
+            }
+        }
+        
+        
+        
+        
+    }
+    
 }
+
 
 
 

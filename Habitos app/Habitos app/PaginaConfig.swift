@@ -97,7 +97,9 @@ class PaginaConfig: UIViewController {
         
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     createNotifcation()
+        if SwitchState.isOn{
     UserDefaults.standard.set(TextFieldRecompensa.text, forKey: "nomeRecompensa")
+        }
     aviso(self)
     }
     
@@ -123,7 +125,7 @@ class PaginaConfig: UIViewController {
     }
     func avisoDeletar(_ sender: Any) {
         
-        let aviso : UIAlertController = UIAlertController(title: "Deletar Habito", message: "Voce realmete deseja deletar seu habito e começar um novo ?", preferredStyle:.alert)
+        let aviso : UIAlertController = UIAlertController(title: "Deletar Habito", message: "Voce realmete deseja deletar seu hàbito e começar um novo ?", preferredStyle:.alert)
 //        let OkAction = UIAlertAction(title: "OK", style: .default)
         let CancelAction = UIAlertAction(title: "Cancelar", style: .cancel)
         let OkAction =  UIAlertAction(title: "Apagar",
@@ -174,7 +176,7 @@ class PaginaConfig: UIViewController {
     // ---------------notification-------------------
     
     var titulo = "Esta na hora do seu habito"
-    var corpo = "Continua a desenvoler seu habito, voce consegue"
+    var corpo = "Continue a desenvoler seu hábito, voce consegue!"
     var som = true
     var badge = false
     
@@ -188,8 +190,8 @@ class PaginaConfig: UIViewController {
         
         dateComponents.hour = components.hour!
         dateComponents.minute = components.minute!
-        titulo = "testzera"
-        corpo = "Continua a desenvoler seu habito, voce consegue"
+        titulo = UserDefaults.standard.string(forKey: "nomeHabito")!
+        corpo = "Continue a desenvoler seu hábito, você consegue!"
         
         
         //O identificador serve para o caso de queremos identificar uma notificação especifica

@@ -18,6 +18,12 @@
 		7D27AB6222DD36E0008F5E98 /* GOLDEN BALL:50%.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D27AB5E22DD36E0008F5E98 /* GOLDEN BALL:50%.png */; };
 		7D27AB6422DD3AAB008F5E98 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27AB6322DD3AAB008F5E98 /* MainPage.swift */; };
 		7D27AB6622DD3DF2008F5E98 /* UltimaPgTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */; };
+		7D5F532C22F387F5004EBA43 /* Historico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F532B22F387F4004EBA43 /* Historico.swift */; };
+		7D5F532E22F38B64004EBA43 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F532D22F38B64004EBA43 /* TableViewController.swift */; };
+		7D5F533022F4A120004EBA43 /* HistoricoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F532F22F4A120004EBA43 /* HistoricoCell.swift */; };
+		7D5F533322F4B79A004EBA43 /* Habito+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F533122F4B79A004EBA43 /* Habito+CoreDataClass.swift */; };
+		7D5F533422F4B79A004EBA43 /* Habito+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F533222F4B79A004EBA43 /* Habito+CoreDataProperties.swift */; };
+		7D5F533622F4DD30004EBA43 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F533522F4DD30004EBA43 /* TransitionViewController.swift */; };
 		7D9E1B8122D8FB38004356F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */; };
 		7D9E1B8322D8FB38004356F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8222D8FB38004356F7 /* ViewController.swift */; };
 		7D9E1B8622D8FB38004356F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E1B8422D8FB38004356F7 /* Main.storyboard */; };
@@ -43,6 +49,12 @@
 		7D27AB5E22DD36E0008F5E98 /* GOLDEN BALL:50%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GOLDEN BALL:50%.png"; sourceTree = "<group>"; };
 		7D27AB6322DD3AAB008F5E98 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimaPgTutorial.swift; sourceTree = "<group>"; };
+		7D5F532B22F387F4004EBA43 /* Historico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historico.swift; sourceTree = "<group>"; };
+		7D5F532D22F38B64004EBA43 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7D5F532F22F4A120004EBA43 /* HistoricoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoCell.swift; sourceTree = "<group>"; };
+		7D5F533122F4B79A004EBA43 /* Habito+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habito+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7D5F533222F4B79A004EBA43 /* Habito+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habito+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7D5F533522F4DD30004EBA43 /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		7D9E1B7D22D8FB38004356F7 /* Habitos app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habitos app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E1B8222D8FB38004356F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +109,8 @@
 		7D9E1B7422D8FB38004356F7 = {
 			isa = PBXGroup;
 			children = (
+				7D5F533122F4B79A004EBA43 /* Habito+CoreDataClass.swift */,
+				7D5F533222F4B79A004EBA43 /* Habito+CoreDataProperties.swift */,
 				7D9E1B7F22D8FB38004356F7 /* Habitos app */,
 				7D9E1B7E22D8FB38004356F7 /* Products */,
 				7D27AB5122DD2A34008F5E98 /* Fonts */,
@@ -117,10 +131,14 @@
 				7D9E1B8022D8FB38004356F7 /* AppDelegate.swift */,
 				7D27AB6322DD3AAB008F5E98 /* MainPage.swift */,
 				7D9E1B8222D8FB38004356F7 /* ViewController.swift */,
+				7D5F532F22F4A120004EBA43 /* HistoricoCell.swift */,
+				7D5F532B22F387F4004EBA43 /* Historico.swift */,
 				7D27AB6522DD3DF2008F5E98 /* UltimaPgTutorial.swift */,
 				7D9E1B8422D8FB38004356F7 /* Main.storyboard */,
 				7DE4EA2A22E120EF00B398D1 /* PaginaPrincipal.swift */,
+				7D5F532D22F38B64004EBA43 /* TableViewController.swift */,
 				7DE4EA2C22E1210300B398D1 /* PaginaConfig.swift */,
+				7D5F533522F4DD30004EBA43 /* TransitionViewController.swift */,
 				7DE4EA2E22E1211600B398D1 /* PaginaCriarHabito.swift */,
 				7D27AB4A22DD28E7008F5E98 /* TutorialPageVC.swift */,
 				7D9E1B8A22D8FB3A004356F7 /* Assets.xcassets */,
@@ -218,9 +236,15 @@
 				7D27AB4B22DD28E7008F5E98 /* TutorialPageVC.swift in Sources */,
 				7DE4EA2D22E1210300B398D1 /* PaginaConfig.swift in Sources */,
 				7D9E1B8322D8FB38004356F7 /* ViewController.swift in Sources */,
+				7D5F533322F4B79A004EBA43 /* Habito+CoreDataClass.swift in Sources */,
+				7D5F533422F4B79A004EBA43 /* Habito+CoreDataProperties.swift in Sources */,
 				7DE4EA2B22E120EF00B398D1 /* PaginaPrincipal.swift in Sources */,
+				7D5F533022F4A120004EBA43 /* HistoricoCell.swift in Sources */,
+				7D5F532E22F38B64004EBA43 /* TableViewController.swift in Sources */,
+				7D5F532C22F387F5004EBA43 /* Historico.swift in Sources */,
 				7DE4EA2F22E1211600B398D1 /* PaginaCriarHabito.swift in Sources */,
 				7D27AB6622DD3DF2008F5E98 /* UltimaPgTutorial.swift in Sources */,
+				7D5F533622F4DD30004EBA43 /* TransitionViewController.swift in Sources */,
 				7D9E1B8122D8FB38004356F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -49,19 +49,11 @@ class TutorialPageVC: UIPageViewController {
         
         self.dataSource = self
         self.delegate = self
-        configurePageControl()
         
         if let firstVC = pages.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
         
-        defaults = UserDefaults()
-        guard let defaults = defaults else { return }
-        appHasBeenOpenedBefore = defaults.bool(forKey: "theAppHasBeenOpenedBefore")
-        
-        if appHasBeenOpenedBefore {
-            view.alpha = 0
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
