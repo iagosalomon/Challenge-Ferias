@@ -57,7 +57,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ9-VP-ZKp">
                                 <rect key="frame" x="53" y="335.5" width="308" height="105"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
-                                <state key="normal" title="HISTORICO" backgroundImage="Button.png">
+                                <state key="normal" title="HISTÓRICO" backgroundImage="Button.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -197,7 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Seu Habito" id="jJ3-bS-R06">
+                    <navigationItem key="navigationItem" title="Seu Hábito" id="jJ3-bS-R06">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="bookmarks" id="ZXG-n5-3Ec">
                             <connections>
                                 <segue destination="ufg-c4-DEd" kind="presentation" modalTransitionStyle="crossDissolve" id="yzG-LC-0ic"/>
@@ -237,14 +237,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horario do alarme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSF-lC-AsC">
-                                <rect key="frame" x="10" y="108" width="394" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário do alarme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSF-lC-AsC">
+                                <rect key="frame" x="10" y="108" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3aN-TX-jJE">
-                                <rect key="frame" x="0.0" y="148.5" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="149" width="414" height="269"/>
                                 <date key="date" timeIntervalSinceReferenceDate="585180053.40968096">
                                     <!--2019-07-18 22:00:53 +0000-->
                                 </date>
@@ -257,25 +257,25 @@
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modo recompensa ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk6-CO-aeh">
-                                <rect key="frame" x="20" y="437.5" width="156" height="21"/>
+                                <rect key="frame" x="20" y="438" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k85-zB-5qn">
-                                <rect key="frame" x="345" y="437.5" width="51" height="31"/>
+                                <rect key="frame" x="345" y="438" width="51" height="31"/>
                                 <connections>
                                     <action selector="Changehidden:" destination="nrb-qx-veq" eventType="valueChanged" id="O47-Nc-3Nt"/>
                                 </connections>
                             </switch>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpO-ev-TV8">
-                                <rect key="frame" x="20" y="509.5" width="374" height="30"/>
+                                <rect key="frame" x="20" y="510" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como deseja se recompensar ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqC-iO-ITd">
-                                <rect key="frame" x="10" y="478.5" width="394" height="21"/>
+                                <rect key="frame" x="10" y="479" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -284,7 +284,7 @@
                                 <rect key="frame" x="40" y="762.5" width="334" height="89.5"/>
                                 <color key="backgroundColor" red="1" green="0.34901960784313724" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
-                                <state key="normal" title="Apagar habito">
+                                <state key="normal" title="Apagar hábito">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -362,7 +362,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOLDEN BALL-25%.png" translatesAutoresizingMaskIntoConstraints="NO" id="jbT-5U-Ujp">
                                 <rect key="frame" x="40" y="84" width="334" height="301.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAM è um aplicativo que ira te acompanhar na jornada de criar um hàbito novo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-1a-bBr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAM é um aplicativo que irá te acompanhar na jornada de criar um hábito novo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-1a-bBr">
                                 <rect key="frame" x="40" y="490.5" width="334" height="329.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -426,11 +426,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOLDEN BALL:50%.png" translatesAutoresizingMaskIntoConstraints="NO" id="hxQ-5L-liq">
                                 <rect key="frame" x="40" y="84" width="334" height="301"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHk-ar-BjM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHk-ar-BjM">
                                 <rect key="frame" x="40" y="491" width="334" height="329"/>
-                                <string key="text">Sua Jornada consiste em  28 dias realizando seu hàbito
-Apos ter feito ele no dia so precisa clicar no botāo  adicionar esforço para atualizar seu progresso
-e ver o liquido dentro do circulo ir subindo ate voce completar o seu hàbito</string>
+                                <string key="text">Sua Jornada consiste em  28 dias realizando seu hábito.
+Após tê-lo realizado no dia, só precisa clicar no botāo  "Adicionar esforço" para atualizar seu progresso
+e ver o líquido dentro do círculo ir subindo até você completar o seu hábito.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -486,8 +486,8 @@ e ver o liquido dentro do circulo ir subindo ate voce completar o seu hàbito</s
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIl-HT-UL8">
                                 <rect key="frame" x="40" y="491" width="334" height="329"/>
-                                <string key="text">Segundo especialistas da area, 28 dias è o quanto demora para desenvolver um hàbito na sua vida.
-Caso voce venha a quebrar esses 28 dias, recomendo recomeçar a jornada</string>
+                                <string key="text">Segundo especialistas da área, 28 dias é o quanto demora para desenvolver um hábito na sua vida.
+Caso você venha a quebrar esses 28 dias, recomendo recomeçar a jornada.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -532,7 +532,7 @@ Caso voce venha a quebrar esses 28 dias, recomendo recomeçar a jornada</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui por voce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9O-WW-t5Z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui por você" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9O-WW-t5Z">
                                 <rect key="frame" x="20" y="425" width="374" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" red="1" green="0.67843137249999996" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -543,9 +543,8 @@ Caso voce venha a quebrar esses 28 dias, recomendo recomeçar a jornada</string>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYO-fe-beN">
                                 <rect key="frame" x="40" y="491" width="334" height="329"/>
-                                <string key="text">Em uma Jornada Muitas vezes tudo que precisamos para termina-la e apenas a ajuda de alguem para nos mantermos motivados e com força
-
-Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voce precisa daquele empurraozinho para continuar seguindo em frente e te ajudar a cumprir sua meta.</string>
+                                <string key="text">Em uma jornada, muitas vezes tudo que precisamos para terminá-la é apenas a ajuda de alguém para nos manter motivados e com força.
+Pra isso, o SAM está aqui, para ser aquele amigo que te ajuda quando você precisa daquele empurrãozinho para continuar seguindo em frente e te ajudar a cumprir sua meta.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -640,14 +639,14 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horario do alarme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6C-ec-QYb">
-                                <rect key="frame" x="10" y="199" width="394" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hórario do alarme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6C-ec-QYb">
+                                <rect key="frame" x="10" y="199" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bHI-Zl-Qq7">
-                                <rect key="frame" x="0.0" y="239.5" width="414" height="179"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="179"/>
                                 <date key="date" timeIntervalSinceReferenceDate="585180053.40968096">
                                     <!--2019-07-18 22:00:53 +0000-->
                                 </date>
@@ -659,20 +658,20 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modo recompensa ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMc-LC-qcK">
-                                <rect key="frame" x="20" y="438.5" width="156" height="21"/>
+                                <rect key="frame" x="20" y="439" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wXW-Oj-Ig7">
-                                <rect key="frame" x="345" y="438.5" width="51" height="31"/>
+                                <rect key="frame" x="345" y="439" width="51" height="31"/>
                                 <connections>
                                     <action selector="Switch:" destination="Fdf-Uj-8VY" eventType="valueChanged" id="df3-29-J7f"/>
                                     <action selector="switch:" destination="SeE-xI-6Gp" eventType="valueChanged" id="Jt4-ba-DrV"/>
                                 </connections>
                             </switch>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruD-1y-9Ms">
-                                <rect key="frame" x="20" y="530.5" width="374" height="30"/>
+                                <rect key="frame" x="20" y="531" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -683,12 +682,12 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
                                 </connections>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como deseja se recompensar ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ro6-hP-RXT">
-                                <rect key="frame" x="10" y="489.5" width="394" height="21"/>
+                                <rect key="frame" x="10" y="490" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual o Habito que deseja criar ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-MN-793">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual o hábito que deseja criar ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-MN-793">
                                 <rect key="frame" x="10" y="108" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -759,10 +758,10 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
             </objects>
             <point key="canvasLocation" x="4569.5652173913049" y="115.84821428571428"/>
         </scene>
-        <!--Historico-->
+        <!--Histórico-->
         <scene sceneID="RFp-dV-PWG">
             <objects>
-                <viewController title="Historico" id="9g5-mZ-5Tf" customClass="ViewController" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Histórico" id="9g5-mZ-5Tf" customClass="ViewController" customModule="Habitos_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kd1-rm-QfZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -782,13 +781,13 @@ Pra Isso o SAM esta aqui pra voce, para ser aquele amigo que te ajuda quando voc
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOLDEN BALL:100%.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-lO-QwR">
                                                     <rect key="frame" x="20" y="21" width="165.5" height="124"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do habito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOv-6r-G4Y">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do hábito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOv-6r-G4Y">
                                                     <rect key="frame" x="195.5" y="41" width="208.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habito completo em : 08/10/1997" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pow-MR-58n">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hábito completo em : 08/10/1997" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pow-MR-58n">
                                                     <rect key="frame" x="195.5" y="82" width="208.5" height="41.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
