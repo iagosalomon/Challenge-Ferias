@@ -72,6 +72,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         fetchHabito()
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationController?.isNavigationBarHidden = false
        
         // Do any additional setup after loading the view.
     }
