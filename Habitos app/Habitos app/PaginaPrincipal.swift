@@ -15,43 +15,35 @@ class PaginaPrincipal: UIViewController {
     
     var contex : NSManagedObjectContext?
     
-    let fraseinicioarray = ["\"Compreender a dificuldade dos outros é perdoar.\"",
-                            "\"Os homens não têm muito respeito pelos outros porque têm pouco até por sí próprios.\"",
+    let fraseinicioarray = [
+        
                             "\"O lugar que ocupamos é menos importante do que aquele para o qual nos dirigimos.\"",
                             "\"A felicidade só é verdadeira se for compartilhada.\"",
-                            "\"Algumas pessoas sentem-se como se não merecessem amar. Escapando em silêncio em seus espaços vazios, tentando fechar as lacunas do passado.\"",
                             "\"É nas experiências, nas lembranças, na grande e triunfante alegria de viver na mais ampla plenitude que o verdadeiro sentido é encontrado.\"",
-                            "\"Nada é mais maléfico para o espirito aventureiro do homem que um futuro seguro.\"",
-                            "\"A alegria de fazer o bem é a única felicidade verdadeira.\"",
-                            "\"Os que se chamam grandes homens são etiquetas que dão o seu nome aos acontecimentos históricos; e assim como as etiquetas, não têm relação com esses acontecimentos.\"",
                             "\"Assim como uma vela acende outra e pode acender milhares de outras velas, um coração ilumina outro e pode iluminar milhares de outros corações.\"",
                             "\"A sabedoria com as coisas da vida não consiste, ao que me parece, em saber o que é preciso fazer, mas em saber o que é preciso fazer antes e o que fazer depois.\"",
-                            "\"Não alcançamos a liberdade buscando a liberdade, mas sim a verdade. A liberdade não é um fim, mas uma consequência.\"",
-                            "\"Se você já construiu castelos no ar, não tenha vergonha deles. Estão onde devem estar. Agora, dê-lhes alicerces.\"",
-                            "\"Para cada mil homens dedicados a cortar as folhas do mal, há apenas um atacando as raízes.\"",
-                            "\"São precisas duas pessoas para falar a verdade, uma para falar, e outra para ouvir.\"",
-                            "\"Cuidado com todas as atividades que requeiram roupas novas.\"",
-                            "\"A bondade é o único investimento que nunca vai à falência.\"",
-                            "\"É tão difícil observar-se a si mesmo quanto olhar para trás sem se voltar.\"",
                             "\"Quem avança confiante na direção de seus sonhos e se empenha em viver a vida que imaginou para si encontra um sucesso inesperado em seu dia-a-dia.\"",
-                            "\"Fazer todos os dias um bom dia, essa é a mais elevada das artes.\"",
-                            "\"O homem mais rico é aquele cujos prazeres são mais baratos.\"",
-                            "\"Se queres um escudo impenetrável, permanece dentro de ti mesmo.\"",
                             "\"A vida não examinada não vale a pena ser vivida.\"",
                             "\"Tente mover o mundo - o primeiro passo será mover a si mesmo.\"",
                             "\"O mundo é um livro, e quem fica sentado em casa lê somente uma página.\"",
-                            "\"Tomei a decisão de fingir que todas as coisas que até então haviam entrado na minha mente não eram mais verdadeiras do que as ilusões dos meus sonhos.\"",
-                            "\"A filosofia que cultivo não é nem tão bárbara nem tão inacessível que rejeite as paixões; pelo contrário, é só nelas que reside a doçura e felicidade da vida.\"",
-                            "\"Não há nada que dominemos inteiramente a não ser os nossos pensamentos.\"",
-                            "\"Preocupe-se com a aprovação das pessoas e você será prisioneiro de si mesmo.\"",
                             "\"Grandes atos são feitos de pequenas atitudes.\"",
-                            "\"Você só ira falhar quando desistir de tentar\""]
+                            
+                            "\"Você só irá falhar quando desistir de tentar\"",
+                            "\"Tudo o que temos de decidir é o que fazer com o tempo que nos é dado.\"",
+                            "\"Uma viagem de mil milhas começa com um simples passo\"",
+                            "\"Se vale a pena fazer algo, vale a pena fazê-lo bem\"",
+                            "\"O homem que moveu a montanha começou por retirar as menores pedras\""
+                            
+                            
+                            
+    
+                            ]
     
     
     
     
     
-    let citacaoinicioarray = [" - Liev Nikoláievich Tolstói"," - Liev Nikoláievich Tolstói"," - Liev Nikoláievich Tolstói"," - Christopher McCandless"," - Christopher McCandless"," - Christopher McCandless"," - Christopher McCandless"," - Liev Nikoláievich Tolstói"," - Liev Nikoláievich Tolstói"," - Liev Nikoláievich Tolstói"," - Liev Nikoláievich Tolstói"," - Liev Nikoláievich Tolstói"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Henry David Thoreau"," - Sócrates"," - Platão"," - Santo Agostinho"," - René Descartes", " - René Descartes"," - René Descartes"," - Lao Zi"," - Lao Zi","Albert Einstein"]
+    let citacaoinicioarray = [" - Liev Nikoláievich Tolstói"," - Christopher McCandless"," - Christopher McCandless"," - Liev Nikoláievich Tolstói"," - Liev Nikoláievich Tolstói"," - Henry David Thoreau"," - Henry David Thoreau"," - Sócrates"," - Platão"," - Santo Agostinho","-Albert Einstein","-Gandalf The Grey","-Provérbio Chinês","-Provérbio Chinês","-Provérbio Chinês"]
     
     
     // variaveis da notificacao
@@ -166,7 +158,7 @@ class PaginaPrincipal: UIViewController {
         if IncrementarHabito < 28{
             ButtonPorcentagem.setTitle("\(String(format: "%.f",round(porcentagem * porcentagemDoHabito)))%", for: .normal)
         }else{
-            ButtonPorcentagem.setTitle("Parabens", for: .normal)
+            ButtonPorcentagem.setTitle("Parabéns", for: .normal)
             //salvar habito
         }
     }
@@ -186,7 +178,7 @@ class PaginaPrincipal: UIViewController {
     func createNotifcation(){
         var nomeRecompensa = UserDefaults.standard.string(forKey: "nomeRecompensa")
         var titulo = UserDefaults.standard.string(forKey: nomeRecompensa!)
-        var corpo = "Voce conseguiu comprir seu objetivo hoje, aproveite sua recompensa"
+        var corpo = "Você conseguiu comprir seu objetivo hoje, aproveite sua recompensa"
         
         
         let identificador = "identifier\(Int.random(in: 0..<6))"

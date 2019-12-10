@@ -57,7 +57,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         let aCelula:HistoricoCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HistoricoCell
         aCelula.nomeHabito.text = habitos[indexPath.row].nome_habito
         var data = habitos[indexPath.row].data_completo
-        aCelula.dataHabito.text = "Habito completo em : \(data!)"
+        aCelula.dataHabito.text = "Hábito completo em : \(data!)"
         
         return aCelula
     }

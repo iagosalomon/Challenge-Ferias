@@ -16,7 +16,8 @@ class PaginaConfig: UIViewController {
 
     @IBOutlet weak var timePicker: UIDatePicker!
     
- 
+    @IBOutlet weak var deleteButton: UIButton!
+    
     @IBOutlet weak var TextFieldRecompensa: UITextField!
     
     @IBOutlet weak var labelRecompensa: UILabel!
@@ -39,6 +40,7 @@ class PaginaConfig: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        deleteButton.layer.cornerRadius =  10
         timePicker.setValue(UIColor.white, forKey: "textColor")
 
         // Do any additional setup after loading the view.
@@ -175,7 +177,7 @@ class PaginaConfig: UIViewController {
     
     // ---------------notification-------------------
     
-    var titulo = "Esta na hora do seu habito"
+    var titulo = "Está na hora do seu hábito"
     var corpo = "Continue a desenvoler seu hábito, voce consegue!"
     var som = true
     var badge = false

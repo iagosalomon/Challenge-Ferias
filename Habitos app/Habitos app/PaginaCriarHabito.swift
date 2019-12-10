@@ -141,8 +141,8 @@ class PaginaCriarHabito: UIViewController {
     }
 // ---------------notification-------------------
     
-    var titulo = "Esta na hora do seu habito"
-    var corpo = "Continua a desenvoler seu habito, voce consegue"
+    var titulo = "Está na hora do seu hábito"
+    var corpo = "Continue a desenvoler seu hábito, você consegue!"
     var som = true
     var badge = false
     
